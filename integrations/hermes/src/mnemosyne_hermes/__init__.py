@@ -701,6 +701,7 @@ class MnemosyneMemoryProvider(MemoryProvider):
                     source="conversation",
                     importance=0.3,
                     extract_entities=True,
+                    extract=True
                 )
                 # Check for identity-significant signals in user content
                 self._capture_identity_signals(user_content)
@@ -712,6 +713,7 @@ class MnemosyneMemoryProvider(MemoryProvider):
                     source="conversation",
                     importance=0.2,
                     extract_entities=True,
+                    extract=True
                 )
             self._turn_count += 1
             if self._auto_sleep_enabled and self._turn_count % 10 == 0:

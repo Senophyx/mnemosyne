@@ -1413,6 +1413,7 @@ class MnemosyneMemoryProvider(MemoryProvider):
                     source="conversation",
                     importance=0.3,
                     extract_entities=True,
+                    extract=True
                 )
                 self._capture_identity_signals(user_content)
             if "assistant" in self._sync_roles and assistant_content and len(assistant_content) > 10 and not self._should_filter(assistant_content):
@@ -1421,6 +1422,7 @@ class MnemosyneMemoryProvider(MemoryProvider):
                     source="conversation",
                     importance=0.2,
                     extract_entities=True,
+                    extract=True
                 )
             self._turn_count += 1
             if self._auto_sleep_enabled and self._turn_count % 10 == 0:
